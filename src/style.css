@@ -1,0 +1,105 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Roboto:ital,wght@0,100;0,400;0,700;1,500&display=swap');
+
+
+:root{
+    --mainColorPink:#720418;
+    --mainColorOrange:#FF8B00;
+    --mainColorPurple:#9b51e0;
+    --mainColorText:#333333;
+    --mainBorderColor:#e6e7e9c2;
+    --fontRoboto: 'Montserrat', sans-serif;;
+    --fontMons: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family:var(--fontMons);
+}
+
+/*---------- Color Class--------------- */
+.bg-pink-dark{
+    background-color:var(--mainColorPink) !important;
+}
+
+.bg-pink-dark-hover::hover{
+    background-color:#72041896 !important;
+
+}
+
+
+.bg-orange{
+    background-color:var(--mainColorOrange) !important;
+}
+
+.bg-orange:hover{
+    background-color:#dd7a00 !important;
+}
+
+
+.bg-purple{
+    background-color:var(--mainColorPurple) !important;
+}
+
+.bg-main-light{
+    background-color:var(--mainBorderColor) !important;
+}
+
+.rounded-35{
+    border-radius: 35px !important;
+}
+
+/*---------- Size Class--------------- */
+.height-vh{
+    min-height:100vh!important;
+}
+
+.font-14{
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+.absolute-right{
+    right: 0 !important;
+}
+.cursor-pointer{
+    cursor: pointer !important;
+}
+.cursor-pointer:hover{
+    text-decoration: underline;
+}
+/*---------- Project Class--------------- */
+.searchAdminResult{
+    height:300px;
+}
+
+
+
+
+
+
+/* Scroll */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 2px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--mainColorOrange); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--mainColorOrange); 
+
+  }

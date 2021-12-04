@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./src/style.css" />
+
+    <title>Admin Panel</title>
+</head>
+
+<body>
+
+    <div class="container-fluid ">
+        <div class="row">
+            <!-- Admin Menu -->
+            <div class="col-md-3 bg-pink-dark height-vh">
+                <div class="jumbotron p-0 bg-transparent position-fixed mx-4">
+                    <h1 class="display-4">
+                        <img class="img-fluid mt-5" src="./src/img/icon/logo-group.svg" alt="">
+                    </h1>
+                    <hr class="my-4">
+                    <a href="#menuAddBook" class="d-flex align-items-center text-white mt-2 py-2 bg-pink-dark-hover">
+                        <img width="30" class="img-fluid mr-3" src="./src/img/icon/logo.svg" alt="">
+                        <span>
+                            Add book
+                        </span>
+                    </a>
+                    <p class="d-flex align-items-center text-white mt-2 py-2 bg-pink-dark-hover">
+                        <img width="30" class="img-fluid mr-3" src="./src/img/icon/logo.svg" alt="">
+                        <span>
+                            Join Us Table
+                        </span>
+                    </p>
+                    <p class="d-flex align-items-center text-white mt-2 py-2 bg-pink-dark-hover">
+                        <img width="30" class="img-fluid mr-3" src="./src/img/icon/logo.svg" alt="">
+                        <span>
+                            Contact Us Table
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <!-- Admin Content -->
+            <div class="col-md-9 ">
+                <div class="row ml-2">
+                    <!-- Admin header -->
+                    <div class="col-md-12 mb-5">
+                        <div class="d-flex justify-content-end mt-5 mx-5">
+                            <div class="d-flex align-items-center mt-1">
+                                <img src="./src/img/icon/user.svg" class="img-fluid mr-2" alt="">
+                                <span class="mt-2">Admin</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Admin body -->
+                    <div class="col-md-12">
+                        <div class="row">
+                            <!-- Add book section -->
+                            <div class="col-md-12">
+                                <div class="h2 mb-4" id="menuAddBook">Add Book</div>
+                                <div class="search-book-section mb-5">
+
+                                    <div class="h5 mb-3">Search book</div>
+                                    <div>
+                                        <!-- Search input group -->
+                                        <div class="form-group d-flex w-50 position-relative">
+                                            <div class="position-absolute">
+                                                <img src="./src/img/icon/search.svg" class="mt-3 ml-3" alt="">
+                                            </div>
+                                            <input type="text" id="searchAdminInput" placeholder="Search Book"
+                                                class="form-control px-5 rounded-35 form-control-lg " placeholder=""
+                                                aria-describedby="helpId">
+                                            <!-- <small id="helpId" class="text-danger">Help text</small> -->
+                                            <button type="button" id="searchAdminButton"
+                                                class="btn bg-orange text-white btn-lg rounded-35 px-4 position-absolute absolute-right">
+                                                Search</button>
+                                        </div>
+                                        <!-- Result box  -->
+                                        <div id="searchAdminResult"
+                                            class="jumbotron-fluid d-none searchAdminResult position-absolute bg-white shadow rounded-35 overflow-auto w-50 pt-3 pb-1  ">
+                                            <div class="container">
+                                                <div class="search-result-list">
+                                                    <div class="loading">
+                                                        <img class="rounded-circle" src="./src/img/Spinner-1s-200px.gif"
+                                                            width="45" />
+                                                    </div>
+                                                    <!-- <div class="search-result-item cursor-pointer">
+                                                        <p class="lead">
+                                                            <img src="./src/img/icon/clock.svg" class="mr-2" alt="">
+                                                            <span>
+                                                                Jumbo helper text
+                                                            </span>
+                                                        </p>
+                                                       
+                                                    </div> -->
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="form-book-section mt-5">
+                                    <div class="h5">Book form</div>
+                                    <div class="jumbotron w-75 bg-transparent pt-2 px-0">
+                                        <form id="bookForm">
+                                            <div class="form-group">
+                                                <label for="bookName">Book Name</label>
+                                                <input type="text" class="  form-control form-control-lg" id="bookName"
+                                                    name="bookName">
+                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="authorName">Author Name</label>
+                                                <input type="text" class="form-control form-control-lg"
+                                                    name="authorName" id="authorName">
+                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="bookImageUrl">Book Image Url</label>
+                                                <input type="text" class="  form-control form-control-lg"
+                                                    id="bookImageUrl" name="bookImageUrl">
+                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="publicationYear">Publication Year</label>
+                                                <input type="number" class="form-control form-control-lg"
+                                                    id="publicationYear" name="publicationYear">
+                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="bookDesc">Description</label>
+                                                <textarea value='' type="text" class="form-control form-control-lg"
+                                                    id="bookDesc" name="bookDesc">
+                                                    </textarea>
+                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="bookSelectType">Book Type</label>
+                                                <select name="bookSelectType" id="bookSelectType"
+                                                    class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                                    <option value="1">Fantastic</option>
+                                                    <option value="2">Self-development</option>
+                                                    <option value="3">Detectives</option>
+                                                    <option value="4">Baby</option>
+                                                </select>
+                                            </div>
+                                            <button type="submit" id="bookFormSubmit"
+                                                class="btn bg-orange btn-lg btn-block text-white">Send</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Join  Us section -->
+                            <div class="col-md-12">
+                                <div class="h2 mb-4">Join  Us</div>
+                            </div>
+
+                              <!-- Join  Us section -->
+                              <div class="col-md-12">
+                                <div class="h2 mb-4">Contact Us</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+    <script src="./src/index.js"></script>
+</body>
+
+</html>
