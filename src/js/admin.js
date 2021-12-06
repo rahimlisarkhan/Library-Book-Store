@@ -1,6 +1,7 @@
 $(document).ready(function () {
     // ----------------- ADMIN PAGE ------------------------ 
     //DOM elements
+    let adminPanelLogin = $('#adminPanelLogin')
     let searchAdminInput = $('#searchAdminInput')
     let searchAdminResult = $('#searchAdminResult')
     let bookFormSubmit = $('#bookFormSubmit')
@@ -8,13 +9,19 @@ $(document).ready(function () {
     let searchResultData = null
     let searchChooseBookData = null
 
-    //form Inputs
+    //Form Inputs
+    //Admin login form
+    let adminUserName = $('#userName');
+    let adminPassword = $('#password');
+
+    //Book form
     let bookName = $('#bookName');
     let authorName = $('#authorName');
     let bookImageUrl = $('#bookImageUrl');
     let publicationYear = $('#publicationYear');
     let bookDesc = $('#bookDesc');
     let bookSelectType = $('#bookSelectType')
+    //About form
     let aboutTitle = $('#aboutTitle')
     let aboutDesc = $('#aboutDesc')
     let aboutImageUrl = $('#aboutImageUrl')
@@ -34,10 +41,14 @@ $(document).ready(function () {
 
     let database = firebase.database();
 
+    //Call Project Functions
     // getBooks('/books')
+    adminLogin('/admin', JSON.parse(localStorage.getItem('admin')))
     getJoin('/join')
     getContacts('/contact')
     getAboutInfo('/about')
+    // updateDatabaseData('/admin',{username:"adminadmin",password:1234})
+    // writeDatabaseData('/join',{full_name:'Elshad Agazade',email:"rahimlisarkhan@gmail.com"})
     // writeDatabaseData('/join',{full_name:'Elshad Agazade',email:"rahimlisarkhan@gmail.com"})
     // writeDatabaseData('/contact',{full_name:'Sabina Ganieva',address:"1921 Ranchview Dr undefined San Francisco",email:"rahimlisarkhan@gmail.com",phone:"+9942222222"})
 
@@ -95,6 +106,18 @@ $(document).ready(function () {
 
     })
 
+    adminPanelLogin.on('click', function () {
+        let formData = {
+            username: adminUserName.val(),
+            password: adminPassword.val()
+        }
+
+        localStorage.setItem('admin', JSON.stringify(formData))
+
+        adminLogin('/admin/', formData)
+
+    })
+
     $(document).on('click', '.search-result-item', function () {
         let selectBookID = parseInt($(this).attr('id'))
         searchChooseBookData = searchResultData.find(book => book.id === selectBookID)
@@ -102,6 +125,10 @@ $(document).ready(function () {
         searchAdminInput.val('')
         bookFormValueResult(searchChooseBookData)
 
+    })
+
+    $(document).on('click', '#adminLogout', function () {
+        adminLogout()
     })
 
 
@@ -136,6 +163,11 @@ $(document).ready(function () {
         authorName.val(obj.author)
         bookImageUrl.val(obj.smallImageURL)
         publicationYear.val(obj.publicationYear)
+    }
+
+    function adminLogout() {
+        localStorage.clear('admin')
+        window.location.reload()
     }
 
 
@@ -196,6 +228,27 @@ $(document).ready(function () {
     //         console.log(booksData);
     //     })
     // }
+
+    function adminLogin(collection, form) {
+        let adminPanel = $('#adminPanel')
+        let adminSignPanel = $('#adminSignPanel')
+
+        database.ref(collection).on('value', (res) => {
+            let adminPanelObj = res.val()
+
+            if (!form) {
+                adminSignPanel.fadeIn(300)
+                return
+            }
+
+            if (adminPanelObj.username === form.username && adminPanelObj.password.toString() === form.password) {
+                adminPanel.fadeIn()
+                adminSignPanel.fadeOut()
+                return
+            }
+
+        })
+    }
 
     function getJoin(collection) {
         let joinTable = $('#joinTable')

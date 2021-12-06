@@ -18,7 +18,7 @@
 <body>
 
     <div class="container-fluid ">
-        <div class="row">
+        <div class="row" id="adminPanel" style="display:none">
             <!-- Admin Menu -->
             <div class="col-md-3 bg-pink-dark height-vh">
                 <div class="jumbotron p-0 bg-transparent position-fixed mx-4">
@@ -53,8 +53,17 @@
                             Contact
                         </span>
                     </a>
+
+
+                    <button id="adminLogout" class="btn d-flex align-items-center text-white mt-2 py-2 pl-0 bg-pink-dark-hover">
+                        <img width="30" class="img-fluid mr-3" src="./src/img/icon/logo.svg" alt="">
+                        <span>
+                            Logout
+                        </span>
+                    </button>
                 </div>
             </div>
+
             <!-- Admin Content -->
             <div class="col-md-9 ">
                 <div class="row ml-2">
@@ -78,7 +87,7 @@
                                     <div class="h5 mb-3">Search book</div>
                                     <div>
                                         <!-- Search input group -->
-                                        <div class="form-group d-flex w-50 position-relative p-2">
+                                        <div class="form-group d-flex w-50 position-relative">
                                             <div class="position-absolute">
                                                 <img src="./src/img/icon/search.svg" class="mt-2 ml-3" alt="">
                                             </div>
@@ -254,6 +263,31 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </div>
+
+        <div class="row bg-pink-dark height-vh" style="display:none" id="adminSignPanel">
+            <div class="modal-dialog w-50 ">
+                <div class="modal-content mt-5">
+                    <div class="modal-body ">
+                        <div class="h1 modal-title mb-4 font-weight-bold text-center">Welcome Admin</div>
+                        <form method="post">
+                            <div class="form-group ">
+                                <input type="text" placeholder="Username" class="form-control form-control-lg"
+                                    id="userName">
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            </div>
+                            <div class="form-group my-4">
+                                <input type="password" placeholder="Password" class="form-control form-control-lg"
+                                    id="password">
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            </div>
+
+                            <button type="button" id="adminPanelLogin"
+                                class="btn bg-orange btn-lg text-white btn-block">Sign in</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

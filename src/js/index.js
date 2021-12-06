@@ -28,7 +28,18 @@ $(document).ready(function () {
 
     
     //Event Buttons
+    $(document).on('click','#searchBookBtn',function(){
+        let searchBook = $('#searchBook').val()
 
+        console.log(searchBook);
+        database.ref('/books').on('value', (res) => {
+                    let dataObjects = res.val()
+                    let array =  Object.values(dataObjects)
+                    let resultData = array.filter(book=> book.title.toLowerCase().includes(searchBook))
+                    console.log(resultData);
+            
+        })
+    })
 
 
     //Function for Action

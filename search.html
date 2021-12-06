@@ -12,14 +12,14 @@
 
     <link rel="stylesheet" href="./src/style.css" />
 
-    <title>Home</title>
+    <title>Search</title>
 </head>
 
 <body>
 
     <header>
         <div class="container">
-            <nav class="navbar navbar-expand-lg  px-0">
+            <nav class="navbar navbar-expand-lg mt-3 px-0">
                 <a class="navbar-brand" href="#">
                     <img src="./src/img/icon/logo-color.svg" alt="">
                 </a>
@@ -38,21 +38,21 @@
                             <a class="nav-link text-dark" href="./catalog.html">Catalog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="./about.html">About Store</a>
+                            <a class="nav-link text-dark " href="./about.html">About Store</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="./contact.html">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark  nav-active" href="./search.html">Search</a>
+                            <a class="nav-link text-dark nav-active" href="./search.html">Search</a>
                         </li>
                     </ul>
-                    <button class="btn d-flex align-items-center" type="submit">
+                    <div class="btn d-flex align-items-center" data-toggle="modal" data-target="#exampleModal">
                         <img src="./src/img/icon/user.svg" alt="">
                         <span class="ml-1 mt-1">
                             Join
                         </span>
-                    </button>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -60,18 +60,84 @@
 
     <main>
         <div class="container height-vh">
-            
+            <div class="row justify-content-between mt-5">
+                <div class="col-md-4 pb-5">
+                    <div class="search-title h2 mt-5 font-weight-bold">Search</div>
+
+                    <div class="search-form mt-4 ">
+                        <!-- Search input group -->
+                        <div class="form-group d-flex  flex-column  position-relative ">
+                            <div class="position-absolute">
+                                <img src="./src/img/icon/search.svg" class="mt-3 ml-3" alt="">
+                            </div>
+                            <input type="text" id="searchBook" placeholder="Book Name"
+                                class="form-control form-control-lg px-5 rounded-35 " placeholder="" aria-describedby="helpId">
+                            <button id="searchBookBtn" class="btn bg-orange rounded-35 mt-4  btn-lg text-white">Search</button>
+                            <!-- <small id="helpId" class="text-danger">Help text</small> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 pb-5">
+                    <div class="jumbotron d-flex bg-transparent justify-content-between shadow mt-5"
+                        style="height: 504px !important">
+                        <div class="about-image mt-1">
+                            <img class="img-fluid rounded-circle" width="200" src="./src/img/Spinner-1s-200px.gif">
+                        </div>
+
+                        <div class="w-75 ml-4">
+                            <h1 class="h2">Order in Chaos</h1>
+                            <p class="h6">Konstantin Koptelov</p>
+                            <hr class="my-4">
+                            <p>We work without holidays and weekends! Residents of Kiev can receive an order on the day
+                                of its registration. Customers from other cities of Ukraine can receive an order within
+                                1-5 days, depending on the location of the settlement and the selected delivery method.
+                                Orders over UAH 1000 are delivered free of charge *. You can see the available methods,
+                                exact terms and cost of delivery during checkout in the order basket, after selecting
+                                the delivery city </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="jumbotron jumbotron-fluid bg-home-dark text-white p-4 m-0">
-                    <p class="lead">footer</p>
-                </div>
-            </div>
+        <div class="jumbotron jumbotron-fluid bg-home-dark text-white p-4 m-0">
+            <p class="lead">footer</p>
         </div>
     </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-4">
+                <div class="modal-body ">
+                    <div class="h1 modal-title mb-4 font-weight-bold text-center">Join Us</div>
+                    <form method="post">
+                        <div class="form-group ">
+                            <input type="text" placeholder="Full Name" class="form-control form-control-lg"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+                        <div class="form-group my-4">
+                            <input type="email" placeholder="Email" class="form-control form-control-lg"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+
+                        <button type="submit" class="btn bg-orange btn-lg text-white btn-block">Join</button>
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
 
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
