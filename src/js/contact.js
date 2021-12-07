@@ -1,11 +1,5 @@
 $(document).ready(function () {
-    // ----------------- ADMIN PAGE ------------------------ 
-    //DOM elements
-    let aboutTitle = $('.about-title')
-    let aboutDesc = $('.about-desc')
-    let aboutImg = $('.about-image img')
-
-    console.log(aboutTitle);
+    // ----------------- CONTACT PAGE ------------------------ 
 
     const firebaseConfig = {
         apiKey: "AIzaSyBkhrpkbBxNsGFvNYi8FZK39sOE8WxQEmoa",
@@ -21,9 +15,6 @@ $(document).ready(function () {
     firebase.initializeApp(firebaseConfig);
 
     let database = firebase.database();
-
-    // writeDatabaseData('/join',{full_name:'Elshad Agazade',email:"rahimlisarkhan@gmail.com"})
-    // writeDatabaseData('/contact',{full_name:'Sabina Ganieva',address:"1921 Ranchview Dr undefined San Francisco",email:"rahimlisarkhan@gmail.com",phone:"+9942222222"})
 
 
     //Event Buttons
@@ -62,16 +53,5 @@ $(document).ready(function () {
             return false
         }
     }
-
-    function updateDatabaseData(collection, data) {
-        try {
-            database.ref(collection).set(data);
-            return true
-        } catch (err) {
-            console.log(err);
-            return false
-        }
-    }
-
 
 })

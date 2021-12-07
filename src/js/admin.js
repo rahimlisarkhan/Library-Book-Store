@@ -43,14 +43,12 @@ $(document).ready(function () {
     let database = firebase.database();
 
     //Call Project Functions
-    // getBooks('/books')
     adminLogin('/admin', JSON.parse(localStorage.getItem('admin')))
     getJoin('/join')
     getContacts('/contact')
     getAboutInfo('/about')
+    getCatalog('/catalog/')
     // updateDatabaseData('/admin',{username:"adminadmin",password:1234})
-    // writeDatabaseData('/join',{full_name:'Elshad Agazade',email:"rahimlisarkhan@gmail.com"})
-    // writeDatabaseData('/contact',{full_name:'Sabina Ganieva',address:"1921 Ranchview Dr undefined San Francisco",email:"rahimlisarkhan@gmail.com",phone:"+9942222222"})
 
     //Event Buttons
     searchAdminInput.on('input', function () {
@@ -134,6 +132,21 @@ $(document).ready(function () {
         adminLogout()
     })
 
+    $('#addTypeBtn').on('click', function (e) {
+
+        e.preventDefault()
+        let catalog = $('#addType')
+
+        let formData = {
+            catalog: catalog.val()
+        }
+
+        writeDatabaseData('/catalog/', formData)
+
+        catalog.val('')
+
+        getCatalog('/catalog/')
+    })
 
     //Function for Action
     function searchResultDropdownRender(data) {
@@ -217,21 +230,6 @@ $(document).ready(function () {
         }
     }
 
-    // function getBooks(collection) {
-    //     database.ref(collection).on('value', (res) => {
-    //         let dataObjects = res.val()
-    //         let array =  Object.entries(dataObjects)
-
-    //         let booksData = array.map(item => {
-    //             return {
-    //                 id: item[0],
-    //                 ...item[1]
-    //             }
-    //         })
-    //         console.log(booksData);
-    //     })
-    // }
-
     function adminLogin(collection, form) {
         let adminPanel = $('#adminPanel')
         let adminSignPanel = $('#adminSignPanel')
@@ -314,4 +312,16 @@ $(document).ready(function () {
         })
     }
 
+    function getCatalog(collection) {
+        console.log('test');
+
+        database.ref(collection).on('value', (res) => {
+            let catalogData = Object.values(res.val())
+            $('#bookSelectType').html(catalogData.map((type,index)=>{
+                return `<option value="${index+1}">${type.catalog}</option>`
+
+            }))
+            console.log(catalogData);
+        })
+    }
 })

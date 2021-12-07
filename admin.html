@@ -83,6 +83,7 @@
                             <!-- Add book section -->
                             <div class="col-md-12 ">
                                 <div class="h2 mb-4" id="menuAddBook">Home</div>
+                                <!-- Search Book -->
                                 <div class="search-book-section mb-5">
 
                                     <div class="h5 mb-3">Search book</div>
@@ -122,6 +123,8 @@
 
                                     </div>
                                 </div>
+
+                                <!-- Add Book -->
                                 <div class="form-book-section mt-5">
                                     <div class="h5">Book form</div>
                                     <div class="jumbotron w-75 bg-transparent pt-2 px-0">
@@ -152,15 +155,16 @@
                                             </div>
 
                                             <div class="form-group">
-                                         
+
                                                 <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="new" id="isNew" checked>
+                                                    <input class="form-check-input" type="checkbox" value="new"
+                                                        id="isNew">
                                                     <label class="form-check-label" for="isNew">
-                                                      New
+                                                        New
                                                     </label>
-                                                  </div>
-                                            
+                                                </div>
+
                                             </div>
                                             <div class="form-group mb-4">
                                                 <label for="bookDesc">Description</label>
@@ -172,13 +176,34 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="bookSelectType">Book Type</label>
+                                                <label for="bookSelectType d-flex align-items-center">
+                                                    Book Type
+                                                    
+                                                    <!-- Dropdown Menu -->
+                                                    <div class="btn-group mb-1 p-3 rounded dropright">
+                                                        <button type="button"
+                                                            class="btn text-success"
+                                                            data-toggle="dropdown" aria-expanded="false">
+                                                            <span class="h4">
+                                                                +
+                                                            </span>
+                                                        </button>
+                                                        <div class="dropdown-menu shadow">
+                                                            <!-- Dropdown menu links -->
+                                                            <div class="form-group p-1">
+                                                                <label for="addType">Add type</label>
+                                                                <input type="text" class="form-control" id="addType"
+                                                                    name="publicationYear">
+                                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                                <button id="addTypeBtn"
+                                                                    class="btn btn-outline-warning mt-3 btn-block">add</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </label>
                                                 <select name="bookSelectType" id="bookSelectType"
                                                     class="form-control form-control-lg" id="exampleFormControlSelect1">
-                                                    <option value="1">Fantastic</option>
-                                                    <option value="2">Self-development</option>
-                                                    <option value="3">Detectives</option>
-                                                    <option value="4">Baby</option>
+                                                    <!-- <option value="1">Fantastic</option> -->
                                                 </select>
                                             </div>
                                             <button type="submit" id="bookFormSubmit"

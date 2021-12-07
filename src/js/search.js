@@ -23,6 +23,8 @@ $(document).ready(function () {
             $('#searchHelpId').removeClass('d-none')
             return
         }
+
+
         $('#searchHelpId').addClass('d-none')
         $('.search-loading').removeClass('d-none')
 
@@ -36,21 +38,13 @@ $(document).ready(function () {
 
             if (resultData.length === 0) {
                 $('.search-content').html(`
-                    <div class="alert alert-danger" role="alert">
+                    <div class="alert alert-danger mt-5" role="alert">
                         Book name not found!
                     </div>
                 `)
                 return
             }
-
-            if (resultData.length === 0) {
-                $('.search-content').html(`
-                    <div class="alert alert-danger" role="alert">
-                        Book name not found!
-                    </div>
-                `)
-                return
-            }
+       
             $('.search-content').html(resultData.map(book => {
 
                 return (`
@@ -87,18 +81,4 @@ $(document).ready(function () {
         })
     })
 
-
-    //Function for Action
-    function activeSlider(slideShow, slideContent, prevArrow, nextArrow) {
-        $(prevArrow).removeClass('d-none')
-        $(nextArrow).removeClass('d-none')
-        $(slideContent).slick({
-            infinite: true,
-            autoplay: true,
-            slidesToShow: slideShow,
-            speed: 1000,
-            prevArrow: $(prevArrow),
-            nextArrow: $(nextArrow),
-        });
-    }
 })
