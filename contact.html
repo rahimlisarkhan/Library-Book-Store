@@ -12,15 +12,15 @@
 
     <link rel="stylesheet" href="./src/style.css" />
 
-    <title>Home</title>
+    <title>Contact | Library Book Store</title>
 </head>
 
 <body>
 
     <header>
         <div class="container">
-            <nav class="navbar navbar-expand-lg  px-0">
-                <a class="navbar-brand" href="#">
+            <nav class="navbar navbar-expand-lg mt-3 px-0">
+                <a class="navbar-brand" href="./index.html">
                     <img src="./src/img/icon/logo-color.svg" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -38,21 +38,21 @@
                             <a class="nav-link text-dark" href="./catalog.html">Catalog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="./about.html">About Store</a>
+                            <a class="nav-link text-dark " href="./about.html">About Store</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark nav-active" href="./contact.html">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark  " href="./search.html">Search</a>
+                            <a class="nav-link text-dark " href="./search.html">Search</a>
                         </li>
                     </ul>
-                    <button class="btn d-flex align-items-center" type="submit">
+                    <div class="btn d-flex align-items-center" data-toggle="modal" data-target="#exampleModal">
                         <img src="./src/img/icon/user.svg" alt="">
                         <span class="ml-1 mt-1">
                             Join
                         </span>
-                    </button>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -60,16 +60,58 @@
 
     <main>
         <div class="container height-vh">
-            
+            <div class="row justify-content-between mt-5">
+                <div class="col-md-12 pb-5">
+                    <div class="search-title h2 mt-5 font-weight-bold">Contact Us</div>
+
+                    <div class="search-form mt-4 ">
+                        <!-- Search input group -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group d-flex  flex-column  position-relative ">
+                                    <input type="text" id="fullNameContact" style="height: 75px;" placeholder="Full Name"
+                                        class="form-control form-control-lg px-5 rounded ">
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group d-flex  flex-column  position-relative ">
+                                    <input type="email" id="emailContact" style="height: 75px;" placeholder="Email"
+                                        class="form-control form-control-lg px-5 rounded ">
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group d-flex  flex-column  position-relative ">
+                                    <input type="text" id="addressContact" style="height: 75px;" placeholder="Address"
+                                        class="form-control form-control-lg px-5 rounded ">
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group d-flex  flex-column  position-relative ">
+                                    <input type="number" id="phoneContact"  style="height: 75px;" placeholder="Phone"
+                                        class="form-control form-control-lg px-5 rounded ">
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <button id="contactBookBtn" style="height: 75px;" class="btn bg-orange btn-lg rounded mt-4 w-100 text-white">Send</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
     </main>
-
     <footer>
         <div class="container">
             <div class="jumbotron jumbotron-fluid bg-home-dark text-white p-4 m-0">
-                    <p class="lead">footer</p>
-                </div>
+                <p class="lead">footer</p>
             </div>
+        </div>
         </div>
     </footer>
 
@@ -86,7 +128,7 @@
     </script>
 
     <!-- Main -->
-    <script src="./src/js/index.js"></script>
+    <script src="./src/js/contact.js"></script>
 </body>
 
 </html>

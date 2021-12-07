@@ -19,6 +19,7 @@ $(document).ready(function () {
     let authorName = $('#authorName');
     let bookImageUrl = $('#bookImageUrl');
     let publicationYear = $('#publicationYear');
+    let isNew = $('#isNew');
     let bookDesc = $('#bookDesc');
     let bookSelectType = $('#bookSelectType')
     //About form
@@ -49,7 +50,6 @@ $(document).ready(function () {
     getAboutInfo('/about')
     // updateDatabaseData('/admin',{username:"adminadmin",password:1234})
     // writeDatabaseData('/join',{full_name:'Elshad Agazade',email:"rahimlisarkhan@gmail.com"})
-    // writeDatabaseData('/join',{full_name:'Elshad Agazade',email:"rahimlisarkhan@gmail.com"})
     // writeDatabaseData('/contact',{full_name:'Sabina Ganieva',address:"1921 Ranchview Dr undefined San Francisco",email:"rahimlisarkhan@gmail.com",phone:"+9942222222"})
 
     //Event Buttons
@@ -74,10 +74,13 @@ $(document).ready(function () {
     bookFormSubmit.on('click', function (e) {
         e.preventDefault();
 
+        console.log(isNew);
+
         let formData = {
             author: authorName.val(),
             title: bookName.val(),
             img_url: bookImageUrl.val(),
+            is_new: isNew.is(':checked'),
             publicationYear: publicationYear.val(),
             description: bookDesc.val().trim(),
             catalog: bookSelectType.val()

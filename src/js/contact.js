@@ -22,31 +22,37 @@ $(document).ready(function () {
 
     let database = firebase.database();
 
-    getAboutInfo('/about')
     // writeDatabaseData('/join',{full_name:'Elshad Agazade',email:"rahimlisarkhan@gmail.com"})
     // writeDatabaseData('/contact',{full_name:'Sabina Ganieva',address:"1921 Ranchview Dr undefined San Francisco",email:"rahimlisarkhan@gmail.com",phone:"+9942222222"})
 
-    
-    //Event Buttons
-    $(document).on('click','#searchBookBtn',function(){
-        let searchBook = $('#searchBook').val()
 
-        console.log(searchBook);
-        database.ref('/books').on('value', (res) => {
-                    let dataObjects = res.val()
-                    let array =  Object.values(dataObjects)
-                    let resultData = array.filter(book=> book.title.toLowerCase().includes(searchBook))
-                    console.log(resultData);
-            
-        })
+    //Event Buttons
+    $('#contactBookBtn').on('click', function (e) {
+        e.preventDefault();
+
+        console.log('test');
+        let fullNameContact =$('#fullNameContact')
+        let emailContact =$('#emailContact')
+        let addressContact =$('#addressContact')
+        let phoneContact =$('#phoneContact')
+
+        let formData = {
+            full_name: fullNameContact.val(),
+            email: emailContact.val(),
+            address: addressContact.val(),
+            phone: phoneContact.val(),
+        }
+
+        console.log(formData);
+        writeDatabaseData('/contact/', formData)
+
+        fullNameContact.val('')
+        emailContact.val('')
+        addressContact.val('')
+        phoneContact.val('')
     })
 
-
-    //Function for Action
-
-
     //----------------API-----------
-  
     function writeDatabaseData(collection, data) {
         try {
             database.ref(collection).push().set(data);
@@ -67,33 +73,5 @@ $(document).ready(function () {
         }
     }
 
-    // function getBooks(collection) {
-    //     database.ref(collection).on('value', (res) => {
-    //         let dataObjects = res.val()
-    //         let array =  Object.entries(dataObjects)
-
-    //         let booksData = array.map(item => {
-    //             return {
-    //                 id: item[0],
-    //                 ...item[1]
-    //             }
-    //         })
-    //         console.log(booksData);
-    //     })
-    // }
-
-  
-
-    function getAboutInfo(collection) {
-        database.ref(collection).on('value', (res) => {
-            let aboutInfoData = res.val()
-
-            aboutTitle.html(aboutInfoData.title)
-            aboutDesc.html(aboutInfoData.description)
-            // aboutDesc.parent().append(`<img class="img-fluid" width="500" />`)
-            aboutImg.attr('src',aboutInfoData.img_url)
-
-        })
-    }
 
 })

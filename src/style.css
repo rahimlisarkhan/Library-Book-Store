@@ -95,7 +95,20 @@ body {
     height: 310px;
 }
 
+.prev-search{
+    position: absolute;
+    top:42%;
+    left: -5%;
+    cursor: pointer;
 
+}
+
+.next-search{
+    position: absolute;
+    top:42%;
+    right: -5%;
+    cursor: pointer;
+}
 
 
 /* Scroll */
