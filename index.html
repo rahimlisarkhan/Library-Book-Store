@@ -12,12 +12,12 @@
 
     <link rel="stylesheet" href="./src/style.css" />
 
-    <title>Home</title>
+    <title>Home | Library Book Store</title>
 </head>
 
 <body>
 
-    <header>
+    <header class="position-fixed fixed-top bg-white" style="border-bottom: 2px solid whitesmoke;">
         <div class="container">
             <nav class="navbar navbar-expand-lg mt-3  px-0">
                 <a class="navbar-brand" href="#">
@@ -58,30 +58,198 @@
         </div>
     </header>
 
-    <main>
+    <main class="my-5 pt-5 ">
         <div class="container height-vh">
-            
+            <!-- Info -->
+            <section class="info-section text-main">
+                <div class="row mt-5 justify-content-between">
+                    <div class="col-md-5 mb-5">
+                        <div class="jumbotron mt-5 bg-transparent">
+                            <h1 class="h1 font-weight-bolder">Books from A to Z</h1>
+                            <p class="h6">In our store you can find a book for every taste. A large assortment. Nice
+                                prices. Interesting stories.</p>
+                            <a class="btn bg-orange text-white mt-3 btn-lg" href="./catalog.html" role="button">Go to
+                                catalog</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="img-content mt-5">
+                            <img src="./src/img/image.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Catalog -->
+            <section class="catalog-section text-main">
+                <div class="row my-5">
+                    <div class="col-md-12 mb-5">
+                        <div class="h2 mt-5 font-weight-bolder text-center"> Catalog</div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row" id="catalog-home-list">
+                            <!-- <div class="col-md-4 mb-4">
+                                <div class="card shadow cursor-pointer  py-3">
+                                    <div class="card-body">
+                                        <h4 class="card-title m-0 text-center h5 font-weight-bold">Fantastic</h4>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section class="about text-main">
+                <div class="row my-5">
+                    <div class="col-md-12 mb-5">
+                        <div class="h2 mt-5 font-weight-bolder text-center">About Store</div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="display-4 font-weight-bolder mr-4">35</div>
+                                    <div class="h6">Branches the country</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="display-4 font-weight-bolder mr-4">898</div>
+                                    <div class="h6">Products catalog</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="display-4 font-weight-bolder mr-4">8659</div>
+                                    <div class="h6">Branches the country</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="display-4 font-weight-bolder mr-4">72</div>
+                                    <div class="h6">Hours delivery to cities</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Delivery -->
+            <section class="delivery text-main">
+                <div class="row my-5">
+                    <div class="col-md-12 mb-5">
+                        <div class="h2 my-5 font-weight-bolder text-center">Delivery</div>
+                        <div class="h6 text-center" style="line-height: 24px;">
+                            We work without holidays and weekends! Residents of Kiev can receive an order on the day of
+                            its registration. Customers from other cities of Ukraine can receive an order within 1-5
+                            days, depending on the location of the settlement and the selected delivery method. Orders
+                            over UAH 1000 are delivered free of charge *. You can see the available methods, exact terms
+                            and cost of delivery during checkout in the order basket, after selecting the delivery city.
+                            More details
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
-       <!-- Modal -->
-       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <footer>
+        <div class="row ">
+            <div class="col-md-12 m-0 p-0">
+                <div class="row justify-content-center m-0 p-0 ">
+                    <div class="col-md-4 ">
+                        <div class="jumbotron bg-transparent text-center text-main">
+                            <h1 class="h3 mb-4 font-weight-bolder">Follow us on social media</h1>
+                            <div class="row justify-content-center">
+                                <div class="col-md-3">
+                                    <img src="./src/img/icon/facebook.svg" alt="facebook">
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="./src/img/icon/twitter.svg" alt="twitter">
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="./src/img/icon/instagram.svg" alt="instagram">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-12 m-0 p-0">
+                <div class="jumbotron jumbotron-fluid bg-home-dark text-white p-4 m-0">
+                    <div class="container">
+                        <div class="row py-4">
+                            <div class="col-md-6">
+                                <div class="footer-logo">
+                                    <img width="200" src="./src/img/icon/logo-group.svg" alt="footer-logo">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item h5 bg-transparent ">Popular</li>
+                                            <li class="list-group-item bg-transparent">A second item</li>
+                                            <li class="list-group-item bg-transparent">A third item</li>
+                                            <li class="list-group-item bg-transparent">And a fifth one</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item h5 bg-transparent ">Information
+                                            </li>
+                                            <li class="list-group-item bg-transparent">A second item</li>
+                                            <li class="list-group-item bg-transparent">A third item</li>
+                                            <li class="list-group-item bg-transparent">And a fifth one</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item h5 bg-transparent ">Help</li>
+                                            <li class="list-group-item bg-transparent">A second item</li>
+                                            <li class="list-group-item bg-transparent">A third item</li>
+                                            <li class="list-group-item bg-transparent">And a fifth one</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content p-4">
                 <div class="modal-body ">
                     <div class="h1 modal-title mb-4 font-weight-bold text-center">Join Us</div>
                     <form method="post">
                         <div class="form-group ">
-                            <input type="text" placeholder="Full Name" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="text" placeholder="Full Name" class="form-control form-control-lg"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
                             <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                          </div>
-                        <div class="form-group my-4">
-                          <input type="email"  placeholder="Email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp">
-                          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                         </div>
-                  
+                        <div class="form-group my-4">
+                            <input type="email" placeholder="Email" class="form-control form-control-lg"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+
                         <button type="submit" class="btn bg-orange btn-lg text-white btn-block">Join</button>
-                      </form>
+                    </form>
                 </div>
                 <!-- <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -91,11 +259,7 @@
         </div>
     </div>
 
-    <footer>
-        <div class="jumbotron jumbotron-fluid bg-home-dark text-white p-4 m-0">
-            <p class="lead">footer</p>
-        </div>
-    </footer>
+
 
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

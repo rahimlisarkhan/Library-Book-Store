@@ -1,5 +1,5 @@
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Roboto:ital,wght@0,100;0,400;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&family=Roboto:ital,wght@0,100;0,400;0,700;1,500&display=swap');
 
 
 :root {
@@ -7,13 +7,12 @@
     --mainColorPink: #720418;
     --mainColorOrange: #FF8B00;
     --mainColorPurple: #9b51e0;
-    --mainColorText: #333333;
+    --mainColorText: #241400;
     --mainBorderColor: #e6e7e9c2;
     --fontRoboto: 'Montserrat', sans-serif;
     ;
     --fontMons: 'Roboto', sans-serif;
 }
-
 html {
     scroll-behavior: smooth;
 }
@@ -52,6 +51,11 @@ body {
 .bg-home-dark {
     background-color: var(--mainColorHome) !important;
 }
+
+.text-main {
+    color: var(--mainColorText) !important;
+}
+
 
 .rounded-35 {
     border-radius: 35px !important;
