@@ -1,7 +1,7 @@
 $(document).ready(function () {
     const firebaseConfig = {
         apiKey: "AIzaSyBkhrpkbBxNsGFvNYi8FZK39sOE8WxQEmoa",
-        authDomain: "library-bookstore.firebaseapp.com",
+        authDomain: "rahimlisarkhan.github.io",
         storageBucket: "library-bookstore.appspot.com",
         databaseURL: "https://library-bookstore-default-rtdb.firebaseio.com/",
         // projectId: "library-bookstore",
@@ -9,12 +9,7 @@ $(document).ready(function () {
         // appId: "1:971596087187:web:f4355a30e9077873357266"
     };
 
-    var config = {
-        apiKey: "AIzaSyAgEuXgOYwmHK_RqpVzMIJDRLD5ZB7UbbQ",
-        authDomain: "rps-multi-7fedd.firebaseapp.com",
-        storageBucket: "rps-multi-7fedd.appspot.com",
-        databaseURL: "https://rps-multi-7fedd.firebaseio.com",
-      };
+
 
     // // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
