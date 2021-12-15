@@ -158,11 +158,12 @@
     </main>
 
 
-    <footer>
-        <div class="row ">
-            <div class="col-md-12 m-0 p-0">
-                <div class="row justify-content-center m-0 p-0 ">
-                    <div class="col-md-4 ">
+     <!-- Footer -->
+     <footer>
+        <div class="row m-0">
+            <div class="col-md-12">
+                <div class="row justify-content-center ">
+                    <div class="col-md-4 p-0">
                         <div class="jumbotron bg-transparent text-center text-main">
                             <h1 class="h3 mb-4 font-weight-bolder">Follow us on social media</h1>
                             <div class="row justify-content-center">
@@ -239,22 +240,29 @@
                     <form method="post">
                         <div class="form-group ">
                             <input type="text" placeholder="Full Name" class="form-control form-control-lg"
-                                id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                id="joinBookFullName">
                         </div>
                         <div class="form-group my-4">
                             <input type="email" placeholder="Email" class="form-control form-control-lg"
-                                id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                id="joinBookEmail">
                         </div>
 
-                        <button type="submit" class="btn bg-orange btn-lg text-white btn-block">Join</button>
+                        <button id="joinBookBtn" type="button"
+                            class="btn bg-orange btn-lg text-white btn-block">Join</button>
+
+                        <div class="alert alert-danger mt-4 join-error" role="alert" style="display: none;">
+                            <h4 class="alert-heading">Error</h4>
+                            <p></p>
+                            <p class="mb-0">Please check form</p>
+                        </div>
+
+                        <div class="alert alert-success mt-4 join-success" role="alert" style="display: none;">
+                            <h4 class="alert-heading">Successful</h4>
+                            <p></p>
+                            <p class="mb-0">Welcome to the library</p>
+                        </div>
                     </form>
                 </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div> -->
             </div>
         </div>
     </div>

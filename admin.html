@@ -133,30 +133,31 @@
                                                 <label for="bookName">Book Name</label>
                                                 <input type="text" class="  form-control form-control-lg" id="bookName"
                                                     name="bookName">
-                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                <small class="form-text text-danger" style="display:none"></small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="authorName">Author Name</label>
                                                 <input type="text" class="form-control form-control-lg"
                                                     name="authorName" id="authorName">
-                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                <small class="form-text text-danger" style="display:none"></small>
+
                                             </div>
                                             <div class="form-group">
                                                 <label for="bookImageUrl">Image Url</label>
                                                 <input type="text" class="  form-control form-control-lg"
                                                     id="bookImageUrl" name="bookImageUrl">
-                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                <small class="form-text text-danger" style="display:none"></small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="publicationYear">Publication Year</label>
                                                 <input type="number" class="form-control form-control-lg"
                                                     id="publicationYear" name="publicationYear">
-                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                <small class="form-text text-danger" style="display:none"></small>
                                             </div>
 
                                             <div class="form-group">
 
-                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                <!-- <small  class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="new"
                                                         id="isNew">
@@ -171,8 +172,9 @@
                                                 <textarea rows="4" value='' type="text"
                                                     class="form-control form-control-lg" id="bookDesc" name="bookDesc">
                                                     </textarea>
-                                                <span> 12 / 1000</span>
-                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                <span> 0 / 100</span>
+                                                <small class="form-text text-danger" style="display:none"></small>
+
                                             </div>
 
                                             <div class="form-group">
@@ -193,7 +195,7 @@
                                                                 <label for="addType">Add type</label>
                                                                 <input type="text" class="form-control" id="addType"
                                                                     name="publicationYear">
-                                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                                <!-- <small  class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                                                                 <button id="addTypeBtn"
                                                                     class="btn btn-outline-warning mt-3 btn-block">add</button>
                                                             </div>
@@ -204,7 +206,10 @@
                                                     class="form-control form-control-lg" id="exampleFormControlSelect1">
                                                     <!-- <option value="1">Fantastic</option> -->
                                                 </select>
+                                                <small class="form-text text-danger" style="display:none"></small>
+
                                             </div>
+
                                             <button type="submit" id="bookFormSubmit"
                                                 class="btn bg-orange btn-lg btn-block text-white">Add</button>
                                         </form>
@@ -223,7 +228,8 @@
                                                 <label for="aboutTitle">Title</label>
                                                 <input type="text" value=" About Store" class="form-control
                                                     form-control-lg" id="aboutTitle" name="bookName">
-                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                <small class="form-text text-danger" style="display:none"></small>
+
                                             </div>
 
                                             <div class="form-group mb-4">
@@ -233,13 +239,15 @@
                                                     name="aboutDesc">
                                                         </textarea>
                                                 <span> 12 / 1000</span>
-                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                <small class="form-text text-danger" style="display:none"></small>
+
                                             </div>
                                             <div class="form-group">
                                                 <label for="aboutImageUrl">Image Url</label>
                                                 <input type="text" class="  form-control form-control-lg"
                                                     id="aboutImageUrl" name="aboutImageUrl">
-                                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                <small class="form-text text-danger" style="display:none"></small>
+
                                             </div>
 
                                             <button type="submit" id="aboutFormSubmit"
@@ -304,7 +312,7 @@
             </div>
         </div>
 
-        <div class="row bg-pink-dark height-vh" style="display:none" id="adminSignPanel">
+        <div class="row bg-pink-dark height-vh"  id="adminSignPanel" style="display:none">
             <div class="modal-dialog w-50 ">
                 <div class="modal-content mt-5">
                     <div class="modal-body ">
@@ -313,16 +321,27 @@
                             <div class="form-group ">
                                 <input type="text" placeholder="Username" class="form-control form-control-lg"
                                     id="userName">
-                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                             </div>
                             <div class="form-group my-4">
                                 <input type="password" placeholder="Password" class="form-control form-control-lg"
                                     id="password">
-                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                             </div>
+
 
                             <button type="button" id="adminPanelLogin"
                                 class="btn bg-orange btn-lg text-white btn-block">Sign in</button>
+
+                            <div class="alert alert-danger mt-4 admin-error" role="alert" style="display: none;">
+                                <h4 class="alert-heading">Error</h4>
+                                <p></p>
+                                <p class="mb-0">Please check form</p>
+                            </div>
+
+                            <div class="alert alert-success mt-4 admin-success" role="alert" style="display: none;">
+                                <h4 class="alert-heading">Successful</h4>
+                                <p></p>
+                                <p class="mb-0">Welcome admin panel</p>
+                            </div>
                         </form>
                     </div>
                 </div>

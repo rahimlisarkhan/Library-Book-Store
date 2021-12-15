@@ -81,15 +81,81 @@
         </div>
     </main>
 
-    <footer>
-        <div class="jumbotron jumbotron-fluid bg-home-dark text-white p-4 m-0">
-            <p class="lead">footer</p>
+   <!-- Footer -->
+   <footer>
+    <div class="row m-0">
+        <div class="col-md-12">
+            <div class="row justify-content-center ">
+                <div class="col-md-4 p-0">
+                    <div class="jumbotron bg-transparent text-center text-main">
+                        <h1 class="h3 mb-4 font-weight-bolder">Follow us on social media</h1>
+                        <div class="row justify-content-center">
+                            <div class="col-md-3">
+                                <img src="./src/img/icon/facebook.svg" alt="facebook">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./src/img/icon/twitter.svg" alt="twitter">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./src/img/icon/instagram.svg" alt="instagram">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </footer>
+        <div class="col-md-12 m-0 p-0">
+            <div class="jumbotron jumbotron-fluid bg-home-dark text-white p-4 m-0">
+                <div class="container">
+                    <div class="row py-4">
+                        <div class="col-md-6">
+                            <div class="footer-logo">
+                                <img width="200" src="./src/img/icon/logo-group.svg" alt="footer-logo">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item h5 bg-transparent ">Popular</li>
+                                        <li class="list-group-item bg-transparent">A second item</li>
+                                        <li class="list-group-item bg-transparent">A third item</li>
+                                        <li class="list-group-item bg-transparent">And a fifth one</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item h5 bg-transparent ">Information
+                                        </li>
+                                        <li class="list-group-item bg-transparent">A second item</li>
+                                        <li class="list-group-item bg-transparent">A third item</li>
+                                        <li class="list-group-item bg-transparent">And a fifth one</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item h5 bg-transparent ">Help</li>
+                                        <li class="list-group-item bg-transparent">A second item</li>
+                                        <li class="list-group-item bg-transparent">A third item</li>
+                                        <li class="list-group-item bg-transparent">And a fifth one</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</footer>
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content p-4">
                 <div class="modal-body ">
@@ -97,22 +163,29 @@
                     <form method="post">
                         <div class="form-group ">
                             <input type="text" placeholder="Full Name" class="form-control form-control-lg"
-                                id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                id="joinBookFullName">
                         </div>
                         <div class="form-group my-4">
                             <input type="email" placeholder="Email" class="form-control form-control-lg"
-                                id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                id="joinBookEmail">
                         </div>
 
-                        <button type="submit" class="btn bg-orange btn-lg text-white btn-block">Join</button>
+                        <button id="joinBookBtn" type="button"
+                            class="btn bg-orange btn-lg text-white btn-block">Join</button>
+
+                        <div class="alert alert-danger mt-4 join-error" role="alert" style="display: none;">
+                            <h4 class="alert-heading">Error</h4>
+                            <p></p>
+                            <p class="mb-0">Please check form</p>
+                        </div>
+
+                        <div class="alert alert-success mt-4 join-success" role="alert" style="display: none;">
+                            <h4 class="alert-heading">Successful</h4>
+                            <p></p>
+                            <p class="mb-0">Welcome to the library</p>
+                        </div>
                     </form>
                 </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div> -->
             </div>
         </div>
     </div>
@@ -130,7 +203,7 @@
     </script>
 
     <!-- Main -->
-    <script src="./src/js/about.js"></script>
+    <script src="./src/js/index.js"></script>
 </body>
 
 </html>

@@ -36,6 +36,10 @@ body {
     background-color: var(--mainColorOrange) !important;
 }
 
+.text-orange{
+    color: var(--mainColorOrange) !important;
+}
+
 .bg-orange:hover {
     background-color: #dd7a00 !important;
 }
@@ -114,6 +118,9 @@ body {
     cursor: pointer;
 }
 
+.slider-content{
+    height: 420px;
+}
 
 /* Scroll */
 ::-webkit-scrollbar {
