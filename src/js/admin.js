@@ -4,9 +4,9 @@ $(document).ready(function () {
         authDomain: "rahimlisarkhan.github.io",
         storageBucket: "library-bookstore.appspot.com",
         databaseURL: "https://library-bookstore-default-rtdb.firebaseio.com/",
-        // projectId: "library-bookstore",
-        // messagingSenderId: "971596087187",
-        // appId: "1:971596087187:web:f4355a30e9077873357266"
+        projectId: "library-bookstore",
+        messagingSenderId: "971596087187",
+        appId: "1:971596087187:web:f4355a30e9077873357266"
     };
 
 
