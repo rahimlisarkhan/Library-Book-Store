@@ -2,7 +2,7 @@ $(document).ready(function () {
     // ----------------- CONTACT PAGE ------------------------ 
     const firebaseConfig = {
         apiKey: "AIzaSyBkhrpkbBxNsGFvNYi8FZK39sOE8WxQEmoa",
-        authDomain: "rahimlisarkhan.github.io",
+        authDomain: "library-bookstore.firebaseapp.com",
         storageBucket: "library-bookstore.appspot.com",
         databaseURL: "https://library-bookstore-default-rtdb.firebaseio.com/",
         projectId: "library-bookstore",
