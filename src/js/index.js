@@ -14,21 +14,22 @@ $(document).ready(function () {
     firebase.initializeApp(firebaseConfig);
     let database = firebase.database();
 
+    console.log(window.location.pathname);
     //Call App Functions
-    if (window.location.pathname === "/index.html") {
+    if (window.location.pathname === "/Library-Book-Store/index.html") {
         getCatalogProduct('/catalog')
     }
 
-    if (window.location.pathname === "/about.html") {
+    if (window.location.pathname === "/Library-Book-Store/about.html") {
         getAboutInfo('/about')
     }
 
-    if (window.location.pathname === "/catalog.html") {
+    if (window.location.pathname === "/Library-Book-Store/catalog.html") {
         getBooksData('/books')
         getCatalogProduct('/catalog')
     }
 
-    if (window.location.pathname === "/search.html") {
+    if (window.location.pathname === "/Library-Book-Store/search.html") {
         searchResult()
     }
 
