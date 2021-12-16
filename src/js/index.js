@@ -14,22 +14,24 @@ $(document).ready(function () {
     firebase.initializeApp(firebaseConfig);
     let database = firebase.database();
 
-    console.log(window.location.pathname);
+    let path = window.location.pathname.split('/')
+    let page = path[path.length - 1]
+    console.log(page);
     //Call App Functions
-    if (window.location.pathname === "/Library-Book-Store/index.html") {
+    if (page === "index.html") {
         getCatalogProduct('/catalog')
     }
 
-    if (window.location.pathname === "/Library-Book-Store/about.html") {
+    if (page === "about.html") {
         getAboutInfo('/about')
     }
 
-    if (window.location.pathname === "/Library-Book-Store/catalog.html") {
+    if (page === "catalog.html") {
         getBooksData('/books')
         getCatalogProduct('/catalog')
     }
 
-    if (window.location.pathname === "/Library-Book-Store/search.html") {
+    if (page === "search.html") {
         searchResult()
     }
 
@@ -69,9 +71,9 @@ $(document).ready(function () {
     $('#backSection').on('click', function () {
         // $("#productSection").fadeOut(150)
         // $("#catalogSection").fadeIn(150)
-        setTimeout(function (){
+        setTimeout(function () {
             window.location.reload()
-        },200 )
+        }, 200)
     })
 
     $('#contactBookBtn').on('click', function (e) {
