@@ -1,14 +1,13 @@
 $(document).ready(function () {
     const firebaseConfig = {
-        apiKey: "AIzaSyDb9gJHdInzAe7zcU_LdAQoz9WiJsjPRO8",
-        authDomain: "testapp-cc335.firebaseapp.com",
-        projectId: "testapp-cc335",
-        databaseURL: "https://testapp-cc335-default-rtdb.firebaseio.com",
-        storageBucket: "testapp-cc335.appspot.com",
-        messagingSenderId: "909484413616",
-        appId: "1:909484413616:web:7e755affb3cc880bb46175"
+        apiKey: "AIzaSyBkhrpkbBxNsGFvNYi8FZK39sOE8WxQEmo",
+        authDomain: "library-bookstore.firebaseapp.com",
+        databaseURL: "https://library-bookstore-default-rtdb.firebaseio.com",
+        projectId: "library-bookstore",
+        storageBucket: "library-bookstore.appspot.com",
+        messagingSenderId: "971596087187",
+        appId: "1:971596087187:web:f4355a30e9077873357266"
     };
-
 
 
     // // Initialize Firebase
@@ -348,7 +347,7 @@ $(document).ready(function () {
             let adminPanelObj = res.val()
 
             if (adminPanelObj.username !== form.username || adminPanelObj.password.toString() !== form.password) {
-                
+
                 console.log('girir');
                 $('.admin-success').fadeOut(0)
                 $('.admin-error').fadeIn(100)
