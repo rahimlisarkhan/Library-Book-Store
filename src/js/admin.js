@@ -9,7 +9,6 @@ $(document).ready(function () {
         appId: "1:971596087187:web:f4355a30e9077873357266"
     };
 
-
     // // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
