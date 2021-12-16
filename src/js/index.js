@@ -14,26 +14,9 @@ $(document).ready(function () {
     firebase.initializeApp(firebaseConfig);
     let database = firebase.database();
 
-    let path = window.location.pathname.split('/')
-    let page = path[path.length - 1]
-    console.log(page);
-    //Call App Functions
-    if (page === "index.html") {
-        getCatalogProduct('/catalog')
-    }
+    //APP RUN
+    App()
 
-    if (page === "about.html") {
-        getAboutInfo('/about')
-    }
-
-    if (page === "catalog.html") {
-        getBooksData('/books')
-        getCatalogProduct('/catalog')
-    }
-
-    if (page === "search.html") {
-        searchResult()
-    }
 
     //Event Buttons
     $('#joinBookBtn').on('click', function (e) {
@@ -340,4 +323,29 @@ $(document).ready(function () {
 
     }
 
+    function App() {
+        let path = window.location.pathname.split('/')
+        let page = path[path.length - 1]
+
+        switch (page) {
+            case "index.html":
+                getCatalogProduct('/catalog')
+                break;
+            case "about.html":
+                getAboutInfo('/about')
+                break;
+            case "catalog.html":
+                getBooksData('/books')
+                getCatalogProduct('/catalog')
+                break;
+            case "index.html":
+                getCatalogProduct('/catalog')
+                break;
+            case "search.html":
+                searchResult()
+                break;
+            default:
+                break;
+        }
+    }
 })
