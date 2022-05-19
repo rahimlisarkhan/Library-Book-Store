@@ -1,20 +1,5 @@
 $(document).ready(function () {
     // ----------------- CONTACT PAGE ------------------------ 
-    const firebaseConfig = {
-        apiKey: "AIzaSyBkhrpkbBxNsGFvNYi8FZK39sOE8WxQEmo",
-        authDomain: "library-bookstore.firebaseapp.com",
-        databaseURL: "https://library-bookstore-default-rtdb.firebaseio.com",
-        projectId: "library-bookstore",
-        storageBucket: "library-bookstore.appspot.com",
-        messagingSenderId: "971596087187",
-        appId: "1:971596087187:web:f4355a30e9077873357266"
-    };
-
-
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    let database = firebase.database();
-
     //APP RUN
     App()
 
@@ -295,12 +280,13 @@ $(document).ready(function () {
 
             return (`
                 <div>
-                    <div class="card p-3 shadow position-relative" style="width: 184px;">
+                    <div class="card shadow position-relative" style="width: 184px;">
                         <span class="${!book.is_new && 'd-none'} badge badge-danger p-1 position-absolute">New</span>
                         <img width="240" height="190"
                             src="${book.img_url}"
+                            style="object-fit: cover;"
                             class="card-img-top" alt="${book.title}">
-                        <div class="card-body px-0 pb-0 text-center">
+                        <div class="card-body p-3 text-center">
                             <h5 class="card-title">${book.title.slice(0,10)}...</h5>
                             <h6 class="card-title">${book.author.slice(0,10)}..</h6>
                             <button data-id="${book.id}" class="btn bg-orange text-white btn-block readMoreBook ">Read more</a>
